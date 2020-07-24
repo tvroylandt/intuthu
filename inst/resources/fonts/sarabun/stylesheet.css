@@ -1,0 +1,144 @@
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun Thin'), local('Sarabun-Thin'),
+          url('truetype/Sarabun-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun Thin Italic'), local('Sarabun-ThinItalic'),
+          url('truetype/Sarabun-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun ExtraLight'), local('Sarabun-ExtraLight'),
+          url('truetype/Sarabun-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun ExtraLight Italic'), local('Sarabun-ExtraLightItalic'),
+          url('truetype/Sarabun-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun Light'), local('Sarabun-Light'),
+          url('truetype/Sarabun-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun Light Italic'), local('Sarabun-LightItalic'),
+          url('truetype/Sarabun-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun Regular'), local('Sarabun-Regular'),
+          url('truetype/Sarabun-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun Italic'), local('Sarabun-Italic'),
+          url('truetype/Sarabun-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun Medium'), local('Sarabun-Medium'),
+          url('truetype/Sarabun-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun MediumItalic'), local('Sarabun-MediumItalic'),
+          url('truetype/Sarabun-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun SemiBold'), local('Sarabun-SemiBold'),
+          url('truetype/Sarabun-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun SemiBoldItalic'), local('Sarabun-SemiBoldItalic'),
+          url('truetype/Sarabun-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun Bold'), local('Sarabun-Bold'),
+          url('truetype/Sarabun-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun BoldItalic'), local('Sarabun-BoldItalic'),
+          url('truetype/Sarabun-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun ExtraBold'), local('Sarabun-ExtraBold'),
+          url('truetype/Sarabun-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    font-display: swap;
+    src:  local('Sarabun ExtraBoldItalic'), local('Sarabun-ExtraBoldItalic'),
+          url('truetype/Sarabun-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}

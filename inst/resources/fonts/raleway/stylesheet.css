@@ -1,0 +1,81 @@
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway Thin'), local('Raleway-Thin'),
+          url('truetype/Raleway-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway ExtraLight'), local('Raleway-ExtraLight'),
+          url('truetype/Raleway-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway Light'), local('Raleway-Light'),
+          url('truetype/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway Regular'), local('Raleway-Regular'),
+          url('truetype/Raleway-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway Medium'), local('Raleway-Medium'),
+          url('truetype/Raleway-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway SemiBold'), local('Raleway-SemiBold'),
+          url('truetype/Raleway-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway Bold'), local('Raleway-Bold'),
+          url('truetype/Raleway-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway ExtraBold'), local('Raleway-ExtraBold'),
+          url('truetype/Raleway-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    src:  local('Raleway Heavy'), local('Raleway-Heavy'),
+          url('truetype/Raleway-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
