@@ -29,3 +29,5 @@ Imports:
     htmltools,
     extrafont,
     systemfonts
+URL: https://github.com/sgdf-stat/intuthu
+BugReports: https://github.com/sgdf-stat/intuthu/issues
