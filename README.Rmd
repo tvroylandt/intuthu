@@ -34,4 +34,11 @@ Pour des tableaux de bord spécifiques à certaines actions, on les réalise à 
 + mise en package + décider si le tab est dans ce package ou à partnet celui-là est plus général
 + github actions
 + publication
-+ définition des indicateurs cibles^
++ définition des indicateurs cibles
++ ajout de recodage facilité des fonctions, etc...
++ faire un package pas seulement graphique, mais aussi pour faciliter les analyses, avec des référentiels, des shp de territoires, codes fonctions, etc.
++ fonction pour se connecter aux tables ?
++ ajouter des tests + un check + un code coverage auto
+
+
+
