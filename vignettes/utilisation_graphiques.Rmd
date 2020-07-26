@@ -1,0 +1,110 @@
+---
+title: "Construire des graphiques et des tableaux"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{utilisation_graphiques}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  message = FALSE,
+  error = FALSE,
+  warning = FALSE,
+  fig.height = 5,
+  fig.width = 8
+)
+```
+
+L'unité graphique et la forme sont des éléments importants lorsque l'on souhaite communiquer des chiffres. Les SGDF possèdent une charte graphique forte et puissante (https://www.sgdf.fr/vos-ressources/doc-en-stock/category/147-elements-graphiques). L'utiliser dans les analyses statistiques permet ainsi d'apporter de la cohérence et du style aux résultats.
+
+Un certain nombre de fonctions ont été définies pour faciliter ce travail d'utilisation de la charte graphique.
+
+## Palettes
+
+Les couleurs principales de la charte ont été incluses dans les palettes. Des déclinaisons continues sont aussi proposées pour des analyses qui le demandent.
+
+Les couleurs sont interpolées dans des échelles (`scale`) de façon à pouvoir remplir un grand nombre de valeurs. On peut aussi y accéder individuellement au travers de la fonction `sgdf_colors()`. Les couleurs de la charte sont suffixées par "_1". Les autres suffixes correspondent à des teintes différentes.
+
+```{r, show_pal, echo = FALSE}
+pal <- intuthu::sgdf_palettes
+
+labels <- names(pal)
+
+do.call(
+  pals::pal.bands,
+  c(pal, list(labels = labels, gap = 0.2, show.names = FALSE))
+)
+```
+
+## Réaliser un graphique
+
+Les graphiques sont faits avec `ggplot2` et les packages correspondants. Pour des versions interactives, on peut se tourner vers `ggiraph` ou `plotly` selon les besoins.
+
+```{r setup}
+library(intuthu)
+library(tidyverse)
+```
+
+### Thème
+
+La première étape est d'ajouter un thème au moyen de `theme_sgdf()` ou `theme_sgdf_carte()` pour les cartes.
+On peut régler la taille des lignes de la grille par le paramètre `base_line_size` (voire les supprimer en le passant à 0).
+
+```{r theme}
+graph_iris <- ggplot(iris) +
+  geom_point(aes(x = Sepal.Width, y = Petal.Length, color = Species),
+             size = 1.5) +
+  labs(title = "Iris",
+       subtitle = "Croisement des points",
+       caption = "Jeu de données Iris") +
+  theme_sgdf(base_line_size = 0.5)
+
+graph_iris
+```
+
+### Couleurs
+
+On ajoute ensuite les couleurs au moyen des échelles : `scale_color_sgdf_discrete()`. Des versions avec `fill` ou en continu avec `continuous` sont aussi proposées. On peut inverser si besoin avec `reverse = TRUE` ou changer de palette avec `palette`. On doit dans ce dernier cas fournir une des palettes SGDF pré-construites.
+
+```{r scales}
+graph_iris +
+  scale_color_sgdf_discrete()
+```
+
+### Polices
+
+Lorsqu'on ajoute des éléments de texte, on doit en préciser la police (Sarabun). Dans le thème, cela est déjà fait par défaut.
+
+**TO DO -** Rôle des fonctions d'import de fonts ???
+
+```{r font}
+as_tibble(mtcars) %>%
+  bind_cols(car = row.names(mtcars)) %>%
+  ggplot(aes(
+    x = mpg,
+    y = disp,
+    color = hp,
+    label = car
+  )) +
+  geom_text(size = 3.5, family = "Sarabun") +
+  scale_color_sgdf_continuous(palette = "pal_sgdf_rouge_pk", reverse = TRUE) +
+  theme_sgdf(base_line_size = 0.5)
+```
+
+### Export
+
+Deux cas de figures se présentent pour l'export :
+
++ soit le graphique est intégré dans un document et on se contente de le mettre directement dans le code du `rmarkdown`, dans un chunk spécifique. Ou alors on l'exporte avec `ggsave` pour d'autres types de documents.
++ soit il a pour but d'être présenté seul et il est nécessaire de rajouter le logo. On utilise alors la fonction **TO DO** comme suit :
+
+```{r add_logo}
+
+```
+
+## Faire un tableau
+

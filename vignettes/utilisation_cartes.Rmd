@@ -105,6 +105,7 @@ shp_terr_adherents %>%
   stat_sf_coordinates(aes(size = nb_adherents_arrondi, fill = nb_adherents_arrondi),
                       shape = 21) +
   scale_fill_sgdf_continuous(name = "",
+                             palette = "pal_sgdf_vert_compa",
                              reverse = TRUE) +
   scale_size_continuous(name = "", range = c(0.5, 10)) +
   labs(title = "Nombre d'adhérents") +

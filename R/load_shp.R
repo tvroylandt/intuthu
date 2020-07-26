@@ -20,7 +20,8 @@ load_shp_sgdf <- function(niveau = "terr",
   }
 
   # import et filtre
-  shp_sgdf_load <- st_read(pkg_resource("shp", shp_path))
+  shp_sgdf_load <-
+    st_read(pkg_resource("shp", shp_path), quiet = TRUE)
 
   # filtre
   shp_sgdf <- filter(shp_sgdf_load,

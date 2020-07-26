@@ -1,8 +1,8 @@
 # Definition des palettes
 sgdf_palettes <- list(
   "pal_sgdf_main" = sgdf_colors(
-    "bleu_main_1",
-    "orange_lg_1",
+    "bleu_instit_1",
+    "orange_lj_1",
     "bleu_sg_1",
     "rouge_pk_1",
     "vert_compa_1",
@@ -10,11 +10,11 @@ sgdf_palettes <- list(
     "violet_vdl_1"
   ),
   "pal_sgdf_bleu_instit" = sgdf_colors(
-    "bleu_main_0",
-    "bleu_main_1",
-    "bleu_main_2",
-    "bleu_main_3",
-    "bleu_main_4"
+    "bleu_instit_0",
+    "bleu_instit_1",
+    "bleu_instit_2",
+    "bleu_instit_3",
+    "bleu_instit_4"
   ),
   "pal_sgdf_orange_lj" = sgdf_colors(
     "orange_lj_0",
@@ -60,4 +60,4 @@ sgdf_palettes <- list(
   )
 )
 
-usethis::use_data(sgdf_palettes)
+usethis::use_data(sgdf_palettes, overwrite = TRUE)
