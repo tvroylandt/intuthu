@@ -1,9 +1,9 @@
 ---
-title: "Format long"
+title: "Format court"
 subtitle: ""
 author: "SGDF"
 date: ""
-output: intuthu::sgdf_paged_long
+output: intuthu::sgdf_paged_short
 knit: pagedown::chrome_print
 ---
 
