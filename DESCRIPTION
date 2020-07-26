@@ -33,5 +33,10 @@ Imports:
     magrittr,
     dplyr,
     rlang
+Suggests: 
+    knitr,
+    rmarkdown,
+    tidyverse
+VignetteBuilder: knitr
 URL: https://github.com/sgdf-stat/intuthu
 BugReports: https://github.com/sgdf-stat/intuthu/issues

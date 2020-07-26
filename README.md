@@ -36,7 +36,7 @@ Ce package contient :
 - **TO DO -** des vignettes décrivant :
 
   - **TO DO -** l'utilisation des différents éléments graphiques ;
-  - **TO DO -** la construction de cartes ;
+  - la construction de cartes ;
   - **TO DO -** l'ajout des référentiels à certaines données ;
   - **TO DO -** comment se connecter et utiliser les bases de données SGDF ;
   - **TO DO -** une revue des concepts principaux et de leurs modes de calcul.

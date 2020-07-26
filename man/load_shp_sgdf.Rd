@@ -4,7 +4,10 @@
 \alias{load_shp_sgdf}
 \title{Chargement des fonds de carte SGDF}
 \usage{
-load_shp_sgdf(niveau = "terr", type_geo_filtre)
+load_shp_sgdf(
+  niveau = "terr",
+  type_geo_filtre = c("fr_metro", "dom_tom", "zoom_idf")
+)
 }
 \arguments{
 \item{niveau}{Niveau du fond de carte ("terr"/"cr")}

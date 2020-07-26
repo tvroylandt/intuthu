@@ -11,7 +11,7 @@
 #' @importFrom rlang .data
 #'
 load_shp_sgdf <- function(niveau = "terr",
-                          type_geo_filtre) {
+                          type_geo_filtre = c("fr_metro", "dom_tom", "zoom_idf")) {
   # niveau a charger
   if (niveau == "terr") {
     shp_path <- "shp_sgdf_terr.shp"
