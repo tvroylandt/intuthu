@@ -22,7 +22,8 @@ Ce package contient :
   - palettes de couleurs ;
   - échelles (`scale`) associées ;
   - polices d'écriture : Sarabun pour le texte courant, Raleway pour les titres "sérieux", Caveat Brush pour les titres normaux ;
-  - **TO DO -** templates Rmd pour :
+  - **TO DO -** pictogrammes de la charte graphique ;
+  - templates Rmd pour :
   
     - **TO DO -** création de documents paginés en PDF avec `pagedown`. En deux versions, complète et légère ;
     - **TO DO -** création de tableaux de bords statiques avec `flexdashboard`.
@@ -33,7 +34,7 @@ Ce package contient :
   - **TO DO -** points pour la localisation des groupes.
   
 - **TO DO -** des référentiels pour les codes fonctions, structures, formation, etc.
-- **TO DO -** des vignettes décrivant :
+- des vignettes décrivant :
 
   - l'utilisation des différents éléments graphiques ;
   - la construction de cartes ;

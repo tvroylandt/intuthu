@@ -38,12 +38,15 @@ Imports:
     grid,
     flextable,
     webshot,
-    officer
+    officer,
+    magick,
+    pagedown
 Suggests: 
     knitr,
     rmarkdown,
     tidyverse,
-    pals
+    pals,
+    here
 VignetteBuilder: knitr
 URL: https://github.com/sgdf-stat/intuthu
 BugReports: https://github.com/sgdf-stat/intuthu/issues

@@ -1,5 +1,5 @@
 ---
-title: "Construire des graphiques et des tableaux"
+title: "Eléments graphiques"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{utilisation_graphiques}
@@ -139,3 +139,64 @@ flextable(titanic_10) %>%
 Pour les tableaux dynamiques, sur un format web (un tableau de bord par exemple), on préferera `reactable` (https://glin.github.io/reactable/index.html). La personnalisation du thème se fait directement dans le fichier CSS associé.
 
 Ce package est très puissant et permet de réaliser sans serveur des opérations de tri, des graphiques légèrement interactifs, des recherches dans des tableaux, etc. Le coût d'entrée peut cependant être élevé et le passage par du JavaScript rend parfois la reproductibilité difficile.
+
+## Pictogrammes
+
+La nouvelle charte graphique fait une grande utilisation des pictogrammes. La fonction `picto()` permet de les charger, de les coloriser et de les mettre à l'échelle facilement.
+
+```{r picto}
+picto("feuille", couleur = "vert_farfa", scale = "80")
+```
+
+La liste des picto est la suivante :
+
+```{r list_picto, echo = FALSE}
+# liste des picto
+df_picto <-
+  tibble(
+    path = list.files(
+      system.file("resources/picto", package = "intuthu"),
+      full.names = TRUE
+    ),
+    nom = str_remove(str_extract(path, "[^_]+$"), ".png"),
+    type = str_extract(path, "SIGNES(.*)_")
+  ) %>%
+  select(nom, type, path) %>%
+  mutate(
+    type = fct_recode(
+      type,
+      "Communs" = "SIGNES_COMMUNS_",
+      "Farfadets" = "SIGNES_FARFADET_",
+      "Louveteaux-Jeannettes" = "SIGNES_LOUVETEAUX_JEANNETTES_",
+      "Scouts-Guides" = "SIGNES_SCOUTS_GUIDES_",
+      "Pionniers-Caravelles" = "SIGNES_PIONNIERS_CARAVELLES_",
+      "Compagnons" = "SIGNES_COMPAGNONS_"
+    ),
+    type = fct_relevel(
+      type,
+      "Communs",
+      "Farfadets",
+      "Louveteaux-Jeannettes",
+      "Scouts-Guides",
+      "Pionniers-Caravelles",
+      "Compagnons"
+    )
+  ) %>% 
+  arrange(type, nom)
+
+# tableau
+df_picto %>%
+  flextable() %>%
+  set_header_labels(nom = "Nom", type = "Type", path = "Picto") %>% 
+  bg(j = "path", bg = sgdf_colors("bleu_instit_1")) %>%
+  align(j = "path", align = "center") %>% 
+  align(j = "nom", align = "left") %>% 
+  align(j = "type", align = "left") %>% 
+  compose(j = "path",
+          value = as_paragraph(as_image(
+            src = path,
+            width = .40,
+            height = .40
+          ))) %>%
+  theme_flex_sgdf()
+```
