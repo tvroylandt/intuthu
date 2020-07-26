@@ -71,15 +71,13 @@ graph_iris
 On ajoute ensuite les couleurs au moyen des échelles : `scale_color_sgdf_discrete()`. Des versions avec `fill` ou en continu avec `continuous` sont aussi proposées. On peut inverser si besoin avec `reverse = TRUE` ou changer de palette avec `palette`. On doit dans ce dernier cas fournir une des palettes SGDF pré-construites.
 
 ```{r scales}
-graph_iris +
+graph_iris <- graph_iris +
   scale_color_sgdf_discrete()
 ```
 
 ### Polices
 
 Lorsqu'on ajoute des éléments de texte, on doit en préciser la police (Sarabun). Dans le thème, cela est déjà fait par défaut.
-
-**TO DO -** Rôle des fonctions d'import de fonts ???
 
 ```{r font}
 as_tibble(mtcars) %>%
@@ -100,11 +98,44 @@ as_tibble(mtcars) %>%
 Deux cas de figures se présentent pour l'export :
 
 + soit le graphique est intégré dans un document et on se contente de le mettre directement dans le code du `rmarkdown`, dans un chunk spécifique. Ou alors on l'exporte avec `ggsave` pour d'autres types de documents.
-+ soit il a pour but d'être présenté seul et il est nécessaire de rajouter le logo. On utilise alors la fonction **TO DO** comme suit :
++ soit il a pour but d'être présenté seul et il est nécessaire de rajouter le logo avant d'exporter. On utilise alors la fonction `ajout_logo_sgdf` comme suit, en précisant si besoin avec l'argument `type` quel logo utiliser :
 
 ```{r add_logo}
-
+ajout_logo_sgdf(graph_iris)
 ```
 
 ## Faire un tableau
 
+Un tableau vaut parfois mieux qu'un graphique. Il faut toutefois ne pas y mettre trop d'informations (sinon privilégier un export Excel).
+
+### Personnalisation des tableaux statiques
+
+Les tableaux dits "statiques", destinés à une impression ou à une vue figée sont construits avec `flextable` (https://davidgohel.github.io/flextable/index.html), qui permet d'enchaîner les opérations. La fonction `theme_flex_sgdf()` permet d'ajouter un thème propre aux SGDF.
+
+Pour les exports HTML, utiliser `autofit()` à la fin pour ajuster les auteurs.
+
+```{r tab_statique}
+library(flextable)
+
+# jeu de données
+titanic_10 <- head(as_tibble(Titanic), 10)
+
+# tableau
+flextable(titanic_10) %>%
+  theme_flex_sgdf()
+```
+
+On peut aussi ajouter le logo pour les exports, *modulo* le passage au format image avec `passage_gt_img()` (et donc l'utilisation de `ggsave()` pour les sauvegardes) :
+
+```{r tab_statique_logo}
+flextable(titanic_10) %>%
+  theme_flex_sgdf() %>%
+  passage_flex_img() %>%
+  ajout_logo_sgdf()
+```
+
+### Personnalisation des tableaux dynamiques
+
+Pour les tableaux dynamiques, sur un format web (un tableau de bord par exemple), on préferera `reactable` (https://glin.github.io/reactable/index.html). La personnalisation du thème se fait directement dans le fichier CSS associé.
+
+Ce package est très puissant et permet de réaliser sans serveur des opérations de tri, des graphiques légèrement interactifs, des recherches dans des tableaux, etc. Le coût d'entrée peut cependant être élevé et le passage par du JavaScript rend parfois la reproductibilité difficile.

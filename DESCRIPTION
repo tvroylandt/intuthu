@@ -32,11 +32,18 @@ Imports:
     sf,
     magrittr,
     dplyr,
-    rlang
+    rlang,
+    ggpubr,
+    png,
+    grid,
+    flextable,
+    webshot,
+    officer
 Suggests: 
     knitr,
     rmarkdown,
-    tidyverse
+    tidyverse,
+    pals
 VignetteBuilder: knitr
 URL: https://github.com/sgdf-stat/intuthu
 BugReports: https://github.com/sgdf-stat/intuthu/issues

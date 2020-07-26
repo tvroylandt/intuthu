@@ -35,11 +35,15 @@ Ce package contient :
 - **TO DO -** des référentiels pour les codes fonctions, structures, formation, etc.
 - **TO DO -** des vignettes décrivant :
 
-  - **TO DO -** l'utilisation des différents éléments graphiques ;
+  - l'utilisation des différents éléments graphiques ;
   - la construction de cartes ;
   - **TO DO -** l'ajout des référentiels à certaines données ;
   - **TO DO -** comment se connecter et utiliser les bases de données SGDF ;
   - **TO DO -** une revue des concepts principaux et de leurs modes de calcul.
+  
+### TO DO
+
+- utilisation des fonctions fonts pour l'import ?
 
 ## Qualité
 
