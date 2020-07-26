@@ -22,10 +22,10 @@ Ce package contient :
   - palettes de couleurs ;
   - échelles (`scale`) associées ;
   - polices d'écriture : Sarabun pour le texte courant, Raleway pour les titres "sérieux", Caveat Brush pour les titres normaux ;
-  - **TO DO -** pictogrammes de la charte graphique ;
+  - pictogrammes de la charte graphique ;
   - templates Rmd pour :
   
-    - **TO DO -** création de documents paginés en PDF avec `pagedown`. En deux versions, complète et légère ;
+    - création de documents paginés en PDF avec `pagedown`. En deux versions, complète et légère (**TO DO - version light**) ;
     - **TO DO -** création de tableaux de bords statiques avec `flexdashboard`.
     
 - des fonds de carte, au format `shp` :
@@ -44,7 +44,7 @@ Ce package contient :
   
 ### TO DO
 
-- utilisation des fonctions fonts pour l'import ?
+**- utilisation des fonctions fonts pour l'import ?**
 
 ## Qualité
 

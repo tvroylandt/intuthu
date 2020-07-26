@@ -63,7 +63,7 @@
 
     margin: 0 0 0 0;
     background-color: #ffffff;
-    background-image: url(footer_picto.png);
+    background-image: url(../img/footer_picto.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -72,7 +72,7 @@
 
 /* Nouvelle page de chapitre */
 @page chapter:first {
-  background-image: url(chemin_chapter_tiret.png);
+  background-image: url(../img/chemin_chapter_tiret.png);
   background-position: top 3cm left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -136,17 +136,17 @@ h1.title {
 @page :first{
   margin: 0 0 0 0;
   background-color: #ffffff;
-  background-image: url(picto_blanc.png), url(logo_bleu.png), url(page_avant_bleu.png);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center, top, center;
-  background-size: 70%, 50%, contain;
+  background-image: url(../logo/logo_sgdf_instit.png), url(../img/page_avant_bleu.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, center;
+  background-size: 50%, contain;
 }
 
 /* Derniere page */
 .pagedjs_page:last-of-type {
   margin: 0 0 0 0;
   background-color: #ffffff;
-  background-image: url(page_arriere_bleu.png);
+  background-image: url(../img/page_arriere_bleu.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
