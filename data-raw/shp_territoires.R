@@ -139,6 +139,7 @@ shp_nouvelle_caledonie <- shp_terr_init %>%
 
 # Highlight IDF -----------------------------------------------------------
 shp_zoom_idf <- shp_terr_fr_metro %>%
+  select(-type_geo) %>%
   transformation_shp(
     filter_terr = c(
       "0",
@@ -180,12 +181,14 @@ shp_terr <- shp_terr_fr_metro %>%
   bind_rows(shp_nouvelle_caledonie) %>%
   bind_rows(shp_zoom_idf)
 
+# ajout TERRITOIRE MONDE ?
+
 # Recodages ---------------------------------------------------------------
 # TO DO
 
 # Fond de carte CR --------------------------------------------------------
 shp_cr <- shp_terr %>%
-  group_by(cr) %>%
+  group_by(cr, type_geo) %>%
   summarise() %>%
   ungroup()
 

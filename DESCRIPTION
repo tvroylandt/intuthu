@@ -1,5 +1,5 @@
 Package: intuthu
-Title: Elements Graphiques Des SGDF
+Title: Elements Statistiques SGDF
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Thomas",
@@ -8,14 +8,14 @@ Authors@R:
            email = "thomas@vroylandt.com"),
       person(family = "Scouts et Guides de France",
            role = "cph"))
-Description: Ce package rassemble des éléments graphiques des
-  Scouts et Guides de France. Il est principalement à l'usage du 
-  pôle statistique de l'équipe nationale développement.
-  Les éléments sont centrés autour de thèmes graphiques, de palettes
-  de couleurs et de template pour RMarkdown.
-  En zoulou, "intuthu" veut dire "fumée". La référence vient des
-  signaux de fumée. L'idée est que ce package sert, par la forme,
-  à transmettre des analyses et données statistiques.
+Description: Ce package rassemble des éléments divers pour les statistiques des
+  Scouts et Guides de France. Il est principalement à l'usage du pôle statistique 
+  de l'équipe nationale développement.
+  Les éléments sont centrés d'un côté autour de thèmes graphiques, de palettes
+  de couleurs et de template pour RMarkdown et de l'autre autour de référentiels,
+  fonds de carte et outils destinés à l'analyse de données.
+  En zoulou, "intuthu" veut dire "fumée". La référence vient dessignaux de fumée, 
+  qui transmettent de l'information.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -28,6 +28,10 @@ Imports:
     colorspace,
     htmltools,
     extrafont,
-    systemfonts
+    systemfonts,
+    sf,
+    magrittr,
+    dplyr,
+    rlang
 URL: https://github.com/sgdf-stat/intuthu
 BugReports: https://github.com/sgdf-stat/intuthu/issues
