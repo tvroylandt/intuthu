@@ -17,9 +17,12 @@ html_dependency_sarabun <- function() {
   htmltools::htmlDependency(
     "Sarabun",
     "1.0",
-    src = pkg_resource("fonts", "sarabun"),
-    stylesheet = file.path("stylesheet.css"),
-    all_files = TRUE
+    src = pkg_resource(),
+    head = paste(readLines(
+      pkg_resource("fonts", "head_sarabun.html")
+    ),
+    collapse = "\n"),
+    all_files = FALSE
   )
 }
 
@@ -30,8 +33,11 @@ html_dependency_raleway <- function() {
   htmltools::htmlDependency(
     "Raleway",
     "1.0",
-    src = pkg_resource("fonts", "raleway"),
-    stylesheet = file.path("stylesheet.css"),
+    src = pkg_resource(),
+    head = paste(readLines(
+      pkg_resource("fonts", "head_raleway.html")
+    ),
+    collapse = "\n"),
     all_files = TRUE
   )
 }
@@ -43,8 +49,11 @@ html_dependency_caveat_brush <- function() {
   htmltools::htmlDependency(
     "Caveat Brush",
     "1.0",
-    src = pkg_resource("fonts", "caveat-brush"),
-    stylesheet = file.path("stylesheet.css"),
+    src = pkg_resource(),
+    head = paste(readLines(
+      pkg_resource("fonts", "head_caveat-brush.html")
+    ),
+    collapse = "\n"),
     all_files = TRUE
   )
 }

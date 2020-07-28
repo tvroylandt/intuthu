@@ -1,9 +1,0 @@
-
-@font-face {
-    font-family: 'CaveatBrush';
-    font-display: swap;
-    src:  local('CaveatBrush Regular'), local('CaveatBrush-Regular'),
-          url('truetype/CaveatBrush-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}

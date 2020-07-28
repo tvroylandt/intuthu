@@ -93,6 +93,13 @@ as_tibble(mtcars) %>%
   theme_sgdf(base_line_size = 0.5)
 ```
 
+> Ces polices sont disponibles sur Google Fonts et **doivent être installées en amont** pour pouvoir être utilisées. Pour les documents HTML, la dépendance est ajoutée automatiquement :
+>
+> + https://fonts.google.com/specimen/Sarabun ;
+> + https://fonts.google.com/specimen/Caveat+Brush ;
+> + https://fonts.google.com/specimen/Raleway.
+>
+
 ### Export
 
 Deux cas de figures se présentent pour l'export :
