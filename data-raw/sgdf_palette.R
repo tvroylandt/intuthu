@@ -1,4 +1,7 @@
+# ----------------------- #
 # Definition des palettes
+# ----------------------- #
+
 sgdf_palettes <- list(
   "pal_sgdf_main" = sgdf_colors(
     "bleu_instit_1",

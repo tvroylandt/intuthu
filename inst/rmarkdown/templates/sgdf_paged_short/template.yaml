@@ -1,2 +1,6 @@
 name: SGDF Paged Format Court
+description: >
+  Format de note courte pour les SGDF,
+  sans page de garde ni de fin
+  A utiliser pour des synthèses
 create_dir: true

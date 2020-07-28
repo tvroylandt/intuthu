@@ -1,2 +1,5 @@
 name: SGDF Paged Long Format
+description: >
+  Format de note longue pour les SGDF
+  A utiliser pour des études de plus de 10 pages
 create_dir: true
