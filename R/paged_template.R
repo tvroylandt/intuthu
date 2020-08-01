@@ -34,7 +34,7 @@ sgdf_paged_short <- function(picto) {
   # fichiers de style
   css_sgdf <- pkg_resource("stylesheets", "sgdf.css")
   css_sgdf_paged_short <-
-    pkg_resource("stylesheets", "custom-page_sgdf.css")
+    pkg_resource("stylesheets", "sgdf_paged_short.css")
 
   # template
   pagedown::html_paged(

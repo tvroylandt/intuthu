@@ -4,6 +4,9 @@
 
 library(tidyverse)
 
+# en sortie
+# une liste nommeee par thematique avec les noms
+
 # fonction
 # fonction regroupée
 # couleur

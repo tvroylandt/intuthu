@@ -1,9 +1,9 @@
 ---
-title: "Format court"
-subtitle: ""
+title: "Titre - Format court"
+subtitle: "Sous titre"
 author: "SGDF"
-date: ""
-output: intuthu::sgdf_paged_short
+date: "01/01/2020"
+output: intuthu::sgdf_paged_long
 knit: pagedown::chrome_print
 ---
 
@@ -23,24 +23,20 @@ library(tidyverse)
 library(flextable)
 ```
 
->
-> # Lorem Ipsum
->
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 > Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 > Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
->
 
-# Titre 1
+# Titre 1 {-}
 
-## Titre 2
+## Titre 2 {-}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-## Titre 2
+## Titre 2 {-}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
@@ -53,13 +49,13 @@ iris %>%
   theme_sgdf()
 ```
 
-# Titre 1
+# Titre 1 {-}
 
-## Titre 2
+## Titre 2 {-}
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-```{r gt}
+```{r tab}
 iris %>% 
   filter(Species == "setosa") %>% 
   head(20) %>% 
@@ -67,5 +63,5 @@ iris %>%
   theme_flex_sgdf()
 ```
 
-## Titre 2
+## Titre 2 {-}
 

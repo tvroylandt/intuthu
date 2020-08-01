@@ -1,5 +1,5 @@
 ---
-title: "Eléments graphiques"
+title: "Éléments graphiques"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{utilisation_graphiques}
