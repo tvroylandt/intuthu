@@ -1,3 +1,6 @@
+/* ------------------------ */
+/* - Template SGDF format court -*/
+/* ------------------------ */
 
 /* ---------------------- */
 /* pour l'affichage web - debug*/
@@ -163,4 +166,18 @@ html, body {
   height: 99%;
   page-break-after: avoid;
   page-break-before: avoid;
+}
+
+/* deux colonnes */
+.level2{
+	columns: 2;
+}
+
+/* marges plus legères */
+h1, h2, h3, h4 {
+	margin: 5px 0 5px 0;
+}
+
+p, ul {
+	margin: 3px 0 3px 0;
 }

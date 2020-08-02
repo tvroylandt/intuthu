@@ -9,9 +9,9 @@
 sgdf_paged_long <- function(toc = FALSE,
                             picto) {
   # fichiers de style
-  css_sgdf <- pkg_resource("stylesheets", "sgdf.css")
+  css_sgdf <- pkg_resource("stylesheets", "sgdf_style.css")
   css_sgdf_paged_long <-
-    pkg_resource("stylesheets", "custom-page_sgdf.css")
+    pkg_resource("stylesheets", "sgdf_paged_long.css")
 
   # template
   pagedown::html_paged(
@@ -32,7 +32,7 @@ sgdf_paged_long <- function(toc = FALSE,
 #'
 sgdf_paged_short <- function(picto) {
   # fichiers de style
-  css_sgdf <- pkg_resource("stylesheets", "sgdf.css")
+  css_sgdf <- pkg_resource("stylesheets", "sgdf_style.css")
   css_sgdf_paged_short <-
     pkg_resource("stylesheets", "sgdf_paged_short.css")
 

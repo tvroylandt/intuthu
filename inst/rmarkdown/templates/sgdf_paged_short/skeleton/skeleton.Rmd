@@ -3,7 +3,7 @@ title: "Titre - Format court"
 subtitle: "Sous titre"
 author: "SGDF"
 date: "01/01/2020"
-output: intuthu::sgdf_paged_long
+output: intuthu::sgdf_paged_short
 knit: pagedown::chrome_print
 ---
 
@@ -11,9 +11,7 @@ knit: pagedown::chrome_print
 knitr::opts_chunk$set(
 	echo = FALSE,
 	message = FALSE,
-	warning = FALSE,
-	dpi = 300,
-	out.width = 2100
+	warning = FALSE
 )
 ```
 
@@ -56,11 +54,16 @@ iris %>%
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
 ```{r tab}
+# attention à ne pas faire des tableaux qui dépassent trop
+# on passe en image avec logo pour les fiter
 iris %>% 
   filter(Species == "setosa") %>% 
-  head(20) %>% 
+  head(10) %>% 
+  select(Species, Sepal.Length, Sepal.Width, Petal.Length) %>% 
   flextable() %>% 
-  theme_flex_sgdf()
+  theme_flex_sgdf() %>% 
+  passage_flex_img() %>% 
+  ajout_logo_sgdf()
 ```
 
 ## Titre 2 {-}

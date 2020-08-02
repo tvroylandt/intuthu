@@ -25,7 +25,7 @@ Ce package contient :
   - pictogrammes de la charte graphique ;
   - templates Rmd pour :
   
-    - création de documents paginés en PDF avec `pagedown`. En deux versions, complète et légère (**TO DO - version light**) ;
+    - création de documents paginés en PDF avec `pagedown`. En deux versions, complète et légère ;
     - **TO DO -** création de tableaux de bords statiques avec `flexdashboard`.
     
 - des fonds de carte, au format `shp` :

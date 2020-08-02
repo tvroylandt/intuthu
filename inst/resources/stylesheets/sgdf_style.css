@@ -1,0 +1,28 @@
+/* ------------------------ */
+/* - Template SGDF style standard -*/
+/* ------------------------ */
+
+/* paragaphe et liste */
+p, ul {
+  color: #003a5d;
+  font-family: "Sarabun";
+  text-align: justify;
+}
+
+/* titres */
+h1, h2, h3, h4 {
+  color: #003a5d;
+  font-family: "Caveat Brush";
+  font-weight: bold;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/* numerotation pages */
+.pagedjs_margin-content{
+  color: #003a5d;
+  font-family: "Sarabun";
+  font-weight: bold;
+}
