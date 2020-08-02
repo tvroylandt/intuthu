@@ -1,0 +1,72 @@
+---
+title: "Format Flex Dashboard"
+subtitle: ""
+author: "SGDF"
+date: ""
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: scroll
+    css: ["../../../../resources/stylesheets/sgdf_style.css", "../../../../resources/stylesheets/sgdf_flex.css"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+```{r packages}
+library(intuthu)
+library(tidyverse)
+library(flextable)
+```
+
+Page 1
+===================================== 
+
+Column {data-width=600}
+-------------------------------------
+    
+### Chart 1
+    
+```{r}
+iris %>% 
+  ggplot(aes(x = Sepal.Length, fill = Species)) +
+  geom_bar() +
+  scale_fill_sgdf_discrete() +
+  labs(title = "Iris plot") +
+  theme_sgdf()
+```
+   
+Column {data-width=400}
+-------------------------------------
+   
+### Chart 2
+
+```{r}
+
+```   
+ 
+### Chart 3
+    
+```{r}
+iris %>% 
+  filter(Species == "setosa") %>% 
+  head(20) %>% 
+  flextable() %>% 
+  theme_flex_sgdf()
+```
+
+Page 2
+===================================== 
+
+### Chart 2
+
+```{r}
+
+```   
+ 
+

@@ -1,0 +1,250 @@
+/* ------------------------ */
+/* - Template SGDF flex -*/
+/* ------------------------ */
+
+:root{
+	--main-color: #67686b;
+	--hover-color: #a9a9a9;
+	--back-main-color: #ffffff;
+	--rp-dark-blue: #064689
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------- Titles --------- */
+/* Sidebar title - If we want one */
+h3 {
+
+}
+
+/* Block titles */
+.chart-title {
+	/* text-transform: uppercase; */
+	font-weight: bold;
+	color: var(--main-color);
+	font-size: 2em;
+	margin-top: 1.2em;
+}
+
+/* Graph titles */
+h4 {
+	font-weight: bold;
+	color: var(--main-color);
+	font-size: 1.8em;
+}
+
+h5{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 1.2em;
+  margin: 20px 0 0 0;
+}
+
+/* Titles in toc */
+.h3_toc {
+	font-weight: bold;
+    color: var(--main-color);
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 3px;
+    padding-top: 8px;
+}
+
+.h4_toc {
+    color: var(--main-color);
+    font-size: 0.9em;
+    padding: 4px 0 4px 25px;
+}
+
+a {
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+a:hover{
+	color: var(--hover-color);
+}
+
+
+/* ---------- Logo --------- */
+.navbar-logo {
+	width: 70%;
+}
+
+/* ----------- Colors --------- */
+body {
+	background-color: var(--back-main-color);
+}
+
+/* Navbar colors */
+/* https://github.com/thomaspark/bootswatch/blob/v3.3.5/cosmo/bootstrap.css#L4643-L4744 */
+/* ---> use CSS variables */
+
+/* Navbar background */
+.navbar-inverse {
+  background-color: var(--back-main-color);
+  border-color: var(--back-main-color);
+}
+
+/* Navbar title ("brand") */
+.navbar-inverse .navbar-brand {
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  display: none;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: var(--main-color);
+  background-color: none;
+}
+
+/* Navbar text */
+.navbar-inverse .navbar-nav > li > a {
+  color: var(--hover-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  /* font-family: "PT Sans Narrow"; */
+}
+
+/* Navbar hover + focus */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: var(--main-color);
+  background-color: var(--back-main-color);
+  text-decoration: none;
+  /* font-family: "PT Sans Narrow"; */
+}
+    
+/* Navbar selected */
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: var(--main-color);
+  background-color: var(--back-main-color);
+  text-decoration: none;
+  /* font-family: "PT Sans Narrow"; */
+}
+
+/* Sidebar */
+.section.sidebar {
+    background-color: var(--back-main-color); 
+    padding-top: 40px;
+    /* font-family: "PT Sans Narrow"; */
+}
+
+/* ---------------- Box borders ------------ */
+/* Sidebar */
+.section.sidebar {
+	border-right: none;
+}
+
+/* Boxs */
+.chart-title {
+	border-bottom: none;
+}
+
+.chart-wrapper {
+    border: none;
+}
+
+/* ---------------- Padding ----------------- */
+.dashboard-column {
+    padding-top: 40px;
+}
+
+.container-fluid {
+	padding-top: 10px;
+}
+
+/* ---------------- Gauges ----------------- */
+/* Colors */
+.bg-info {
+  background-color: rgba(153, 84, 187, 0.7);
+}
+
+.bg-warning {
+  background-color: rgba(255, 117, 24, 0.7);
+}
+
+.bg-danger {
+  background-color: rgba(255, 0, 57, 0.7);
+}
+
+.bg-success {
+  background-color: rgba(63, 182, 24, 0.7);
+}
+
+/* Position --> the properties depends on if you use a title to the gauge 
+ 				in this case you have to use the ID of the gauge
+ 				otherwise you could use a general propertiy */
+
+/*
+.chart-stage .html-widget-static-bound {
+    display: table-cell;
+    width: 20% !important;
+}
+*/
+
+[id^="gauge"] {
+    display: table-cell;
+    width: 20% !important;
+ }
+ 
+ /* Sections */
+.section.level4 { 
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	padding: 20px;
+	margin: 20px 0;
+}
+
+/* Details */
+
+details {
+  border: 2px solid #eeeeee;
+  background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 50px 0;
+}
+
+summary {
+  font-weight: bold;
+}
+
+/* Values box progress bar size */
+#box-goals-notoc {
+    height: 30px !important;
+ }
+
+#box-goals-notoc > div.inner > p.value,  #box-goals-notoc > div.inner > p.caption {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+ }
+  
+#box-goals-notoc > div.inner  {
+	padding: 3px;
+	padding-left : 20px;
+}
+
+
+/* summary widget height */
+.container-fluid.crosstalk-bscols {
+	height: 280px;
+}
+
+/* filtered boxes length */
+.filtered-boxes {
+  display: flex;
+}
+
+/* Scroll issue */
+.keep-scroll {
+  color: #ffffff;
+}

@@ -1,0 +1,5 @@
+name: SGDF Flex Dashboard
+description: >
+  Tableau de bord SGDF
+  Adapté du format flexdashboard
+create_dir: true
