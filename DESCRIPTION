@@ -40,7 +40,8 @@ Imports:
     webshot,
     officer,
     magick,
-    pagedown
+    pagedown,
+    flexdashboard
 Suggests: 
     knitr,
     rmarkdown,

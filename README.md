@@ -1,6 +1,10 @@
 
 # *intuthu*
 
+<!-- badges: start -->
+[![R build status](https://github.com/sgdf-stat/intuthu/workflows/R-CMD-check/badge.svg)](https://github.com/sgdf-stat/intuthu/actions)
+<!-- badges: end -->
+
 *intuthu* veut dire “fumée” en zoulou.
 
 L’objectif est de faciliter et d’harmoniser les analyses du pôle statistique de l’équipe nationale développement des Scouts et Guides de
@@ -46,7 +50,7 @@ Ce package contient :
 
 ## Qualité
 
-**TO DO -** L'ensemble est versionné sur Github, soumis à un contrôle qualité strict au travers d'un `check` et d'une couverture du code *via* des tests. Un site de documentation par `pkgdown` est construit automatiquement.
+**TO DO -** L'ensemble est versionné sur Github, soumis à un contrôle qualité strict au travers d'un `check`. Un site de documentation par `pkgdown` est construit automatiquement.
 
 Il est conseillé de regarder des utilisations de ce package dans d'autres projets :
 

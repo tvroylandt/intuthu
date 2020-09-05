@@ -6,7 +6,7 @@
 \usage{
 load_shp_sgdf(
   niveau = "terr",
-  type_geo_filtre = c("fr_metro", "dom_tom", "zoom_idf")
+  type_geo_filtre = c("fr_metro", "dom_tom", "zoom_idf", "All")
 )
 }
 \arguments{
