@@ -22,7 +22,7 @@ jobs:
         config:
           - {os: macOS-latest, r: 'release'}
 
-   # env:
+    env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
 
@@ -54,6 +54,12 @@ jobs:
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
+
+              - name: Install fonts to mac os
+        run: |
+          cp /inst/resources/fonts/raleway/*.ttf /Library/Fonts/
+          cp /inst/resources/fonts/sarabun/*.ttf /Library/Fonts/
+          cp /inst/resources/fonts/caveat-brush/*.ttf /Library/Fonts/
 
       - name: Check
         env:
