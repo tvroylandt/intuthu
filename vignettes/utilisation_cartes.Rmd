@@ -15,9 +15,10 @@ knitr::opts_chunk$set(
   error = FALSE,
   warning = FALSE,
   fig.width = 6,
-  fig.height = 6,
-  eval=FALSE
+  fig.height = 6
 )
+
+options(rmarkdown.html_vignette.check_title = FALSE)
 ```
 
 ## Les zonages SGDF

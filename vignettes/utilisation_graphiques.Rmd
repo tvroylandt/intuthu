@@ -17,6 +17,8 @@ knitr::opts_chunk$set(
   fig.height = 5,
   fig.width = 8
 )
+
+options(rmarkdown.html_vignette.check_title = FALSE)
 ```
 
 L'unité graphique et la forme sont des éléments importants lorsque l'on souhaite communiquer des chiffres. Les SGDF possèdent une charte graphique forte et puissante (https://www.sgdf.fr/vos-ressources/doc-en-stock/category/147-elements-graphiques). L'utiliser dans les analyses statistiques permet ainsi d'apporter de la cohérence et du style aux résultats.

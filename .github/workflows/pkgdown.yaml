@@ -30,6 +30,12 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
+      - name: Install fonts to mac os
+        run: |
+          cp /Users/runner/work/_temp/Library/intuthu/resources/fonts/raleway/*.ttf /Library/Fonts/
+          cp /Users/runner/work/_temp/Library/intuthu/resources/fonts/sarabun/*.ttf /Library/Fonts/
+          cp /Users/runner/work/_temp/Library/intuthu/resources/fonts/caveat-brush/*.ttf /Library/Fonts/
+
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
