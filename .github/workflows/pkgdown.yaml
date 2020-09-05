@@ -30,13 +30,6 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
-      - name: Install fonts
-        run: |
-          brew tap homebrew/cask-fonts
-          brew cask install font-sarabun
-          brew cask install font-raleway
-          brew cask install font-caveat-brush
-
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
