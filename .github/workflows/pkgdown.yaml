@@ -36,6 +36,11 @@ jobs:
           install.packages("pkgdown")
         shell: Rscript {0}
 
+      - name: Install PhantomJS
+        run: |
+          webshot::install_phantomjs()
+        shell: Rscript {0}
+
       - name: Install package
         run: R CMD INSTALL .
 
@@ -43,7 +48,7 @@ jobs:
         run: |
           cp inst/resources/fonts/raleway/*.ttf /Library/Fonts/
           cp inst/resources/fonts/sarabun/*.ttf /Library/Fonts/
-          cp inst/resources/fonts/caveat-brush/*.ttf /Library/Fonts/
+          cp inst/resources/fonts/caveat-brush/CaveatBrush-Regular.ttf /Library/Fonts/
 
       - name: Deploy package
         run: |
