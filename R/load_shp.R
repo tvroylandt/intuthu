@@ -11,12 +11,16 @@
 #' @importFrom rlang .data
 #'
 load_shp_sgdf <- function(niveau = "terr",
-                          type_geo_filtre = c("fr_metro", "dom_tom", "zoom_idf")) {
+                          type_geo_filtre = c("fr_metro", "dom_tom", "zoom_idf", "All")) {
   # niveau a charger
   if (niveau == "terr") {
     shp_path <- "shp_sgdf_terr.shp"
+  } else if (niveau == "terr_init") {
+    shp_path <- "shp_sgdf_terr_init.shp"
   } else if (niveau == "cr") {
     shp_path <- "shp_sgdf_cr.shp"
+  } else if (niveau == "groupes") {
+    shp_path <- "shp_sgdf_groupes.shp"
   }
 
   # import et filtre

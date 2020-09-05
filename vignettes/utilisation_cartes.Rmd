@@ -26,7 +26,7 @@ La géographie des Scouts et Guides de France ne correspond pas toujours aux zon
 + le territoire, auxquel se rattache les différents groupes locaux, en moyenne de la taille d'un département, mais souvent moins dans les départements où le scoutisme est très présent ou à cheval sur plusieurs départements dans les zones très ruales ;
 + le centre de ressource, qui regroupe plusieurs territoires.
 
-Les groupes locaux n'ont pas de zonage spécifique mais peuvent être placés sur une carte, au domicile des responsables de groupe, au centre de la commune de référence, au niveau du local ou d'une église emblématique, siège d'une paroisse.
+Les groupes locaux n'ont pas de zonage spécifique mais peuvent être placés sur une carte.
 
 ## Représenter des données sur une carte
 
@@ -112,3 +112,25 @@ shp_terr_adherents %>%
   theme_sgdf_carte()
 ```
 
+## Localisation des groupes
+
+La localisation des groupes est disponible sous forme de points. Il n'y a pas de recodage. La localisation est donc la même que dans les autres outils de cartographie.
+
+Par conséquent, il faut filtrer en amont sur le fond de carte territoire si on veut afficher quelque chose de propre.
+
+```{r carte_groupes}
+shp_groupes <- load_shp_sgdf("groupes")
+
+shp_terr %>%
+  filter(type_geo == "fr_metro") %>%
+  ggplot() +
+  geom_sf() +
+  geom_sf(data = shp_groupes %>%
+            filter(type_geo == "fr_metro"), aes(color = cr)) +
+  scale_color_sgdf_discrete() +
+  labs(title = "Groupes par CR") +
+  guides(color = FALSE) +
+  theme_sgdf_carte()
+```
+
+On peut aussi utiliser le fond de carte `shp_sgdf_terr_init` pour des cartes sur d'autres zonages que la France métropolitaine.

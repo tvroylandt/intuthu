@@ -16,8 +16,6 @@ shp_terr_init <-
   rename(terr = CODE_TER,
          cr = CR)
 
-# liste des groupes
-
 # ref
 # ref_terr
 
@@ -30,7 +28,7 @@ shp_terr_fr_metro <- shp_terr_init %>%
   st_transform(4326) %>%
   mutate(type_geo = "fr_metro")
 
-# # Ajout DOM ---------------------------------------------------------------
+# Ajout DOM ---------------------------------------------------------------
 # Fonction de transformation
 transformation_shp <-
   function(object,
@@ -61,7 +59,6 @@ shp_martinique <- shp_terr_init %>%
     scale = 1,
     shift = c(-2, 40.8)
   )
-
 # Guadeloupe
 shp_guadeloupe <- shp_terr_init %>%
   transformation_shp(
@@ -181,11 +178,6 @@ shp_terr <- shp_terr_fr_metro %>%
   bind_rows(shp_nouvelle_caledonie) %>%
   bind_rows(shp_zoom_idf)
 
-# ajout TERRITOIRE MONDE ?
-
-# Recodages ---------------------------------------------------------------
-# TO DO
-
 # Fond de carte CR --------------------------------------------------------
 shp_cr <- shp_terr %>%
   group_by(cr, type_geo) %>%
@@ -196,6 +188,12 @@ shp_cr <- shp_terr %>%
 st_write(shp_terr,
          "inst/resources/shp/shp_sgdf_terr.shp",
          delete_dsn = TRUE)
+
+shp_terr_init %>%
+  rmapshaper::ms_simplify() %>%
+  mutate(type_geo = "All") %>%
+  st_write("inst/resources/shp/shp_sgdf_terr_init.shp",
+           delete_dsn = TRUE)
 
 st_write(shp_cr,
          "inst/resources/shp/shp_sgdf_cr.shp",

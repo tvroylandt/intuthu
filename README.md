@@ -31,7 +31,7 @@ Ce package contient :
 - des fonds de carte, au format `shp` :
 
   - polygones aux niveaux territoires et centres de ressources ;
-  - **TO DO -** points pour la localisation des groupes.
+  - points pour la localisation des groupes.
   
 - **TO DO -** des référentiels pour les codes fonctions, structures, formation, etc.
 - des vignettes décrivant :
