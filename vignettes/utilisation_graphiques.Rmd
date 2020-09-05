@@ -15,7 +15,8 @@ knitr::opts_chunk$set(
   error = FALSE,
   warning = FALSE,
   fig.height = 5,
-  fig.width = 8
+  fig.width = 8,
+  eval = FALSE
 )
 
 options(rmarkdown.html_vignette.check_title = FALSE)
