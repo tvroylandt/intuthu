@@ -41,9 +41,9 @@ jobs:
 
       - name: Install fonts to mac os
         run: |
-          cp /inst/resources/fonts/raleway/*.ttf /Library/Fonts/
-          cp /inst/resources/fonts/sarabun/*.ttf /Library/Fonts/
-          cp /inst/resources/fonts/caveat-brush/*.ttf /Library/Fonts/
+          cp inst/resources/fonts/raleway/*.ttf /Library/Fonts/
+          cp inst/resources/fonts/sarabun/*.ttf /Library/Fonts/
+          cp inst/resources/fonts/caveat-brush/*.ttf /Library/Fonts/
 
       - name: Deploy package
         run: |

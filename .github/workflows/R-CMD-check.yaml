@@ -55,11 +55,11 @@ jobs:
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 
-              - name: Install fonts to mac os
+      - name: Install fonts to mac os
         run: |
-          cp /inst/resources/fonts/raleway/*.ttf /Library/Fonts/
-          cp /inst/resources/fonts/sarabun/*.ttf /Library/Fonts/
-          cp /inst/resources/fonts/caveat-brush/*.ttf /Library/Fonts/
+          cp inst/resources/fonts/raleway/*.ttf /Library/Fonts/
+          cp inst/resources/fonts/sarabun/*.ttf /Library/Fonts/
+          cp inst/resources/fonts/caveat-brush/*.ttf /Library/Fonts/
 
       - name: Check
         env:

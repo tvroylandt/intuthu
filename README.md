@@ -10,6 +10,10 @@
 L’objectif est de faciliter et d’harmoniser les analyses du pôle statistique de l’équipe nationale développement des Scouts et Guides de
 France.
 
+## Documentation
+
+La documentation est disponible ici : https://sgdf-stat.github.io/intuthu/index.html
+
 ## Installation
 
 L’installation se fait, pour les personnes habilitées, par :
@@ -59,4 +63,4 @@ Il est conseillé de regarder des utilisations de ce package dans d'autres proje
 
 ## Contact
 
-Le contact pour ce package est Thomas Vroylandt (thomas@vroylandt.com), équipier national statistiques.
+Le contact pour ce package est Thomas Vroylandt, équipier national statistiques.
