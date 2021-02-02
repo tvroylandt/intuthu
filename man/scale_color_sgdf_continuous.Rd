@@ -15,7 +15,7 @@ scale_color_sgdf_continuous(
 
 \item{reverse}{Indique si il faut inverser la palette.}
 
-\item{...}{Arguments de \code{\link[ggplot2:scale_color_gradientn]{ggplot2::scale_color_gradientn()}}.}
+\item{...}{Arguments de \code{\link[ggplot2:scale_gradient]{ggplot2::scale_color_gradientn()}}.}
 }
 \description{
 Continuous color scale

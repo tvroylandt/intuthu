@@ -15,7 +15,7 @@ scale_fill_sgdf_continuous(
 
 \item{reverse}{Indique si il faut inverser la palette.}
 
-\item{...}{Arguments de \code{\link[ggplot2:scale_fill_gradientn]{ggplot2::scale_fill_gradientn()}}.}
+\item{...}{Arguments de \code{\link[ggplot2:scale_gradient]{ggplot2::scale_fill_gradientn()}}.}
 }
 \description{
 Continuous fill scale

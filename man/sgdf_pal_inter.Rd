@@ -11,7 +11,7 @@ sgdf_pal_inter(palette = "pal_sgdf_main", reverse = FALSE, ...)
 
 \item{reverse}{Indique si il faut inverser la palette.}
 
-\item{...}{Arguments de \code{\link[grDevices:colorRampPalette]{grDevices::colorRampPalette()}}.}
+\item{...}{Arguments de \code{\link[grDevices:colorRamp]{grDevices::colorRampPalette()}}.}
 }
 \value{
 Renvoie un numeric (nb de couleurs) et un vecteur de couleurs.

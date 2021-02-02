@@ -47,7 +47,12 @@ library(tidyverse)
 On commence par charger le fond de carte avec la fonction `load_shp_sgdf()`. On doit lui préciser le niveau souhaité (territoire ou CR). On peut aussi éventuellement ajouter un filtre pour ne pas inclure le zoom sur l'Île-de-France ou les DOMs-TOMs.
 
 ```{r load_map}
-shp_terr <- load_shp_sgdf(niveau = "terr")
+ref_terr <-
+  readxl::read_xlsx(system.file("extdata/ref_terr.xlsx", package = "intuthu"))
+
+shp_terr <- load_shp_sgdf(niveau = "terr") %>% 
+  left_join(ref_terr, by = "terr")
+
 shp_cr <- load_shp_sgdf(niveau = "cr")
 ```
 
@@ -136,3 +141,74 @@ shp_terr %>%
 ```
 
 On peut aussi utiliser le fond de carte `shp_sgdf_terr_init` pour des cartes sur d'autres zonages que la France métropolitaine.
+
+## Carte des territoires
+
+On exporte une carte grand format des territoires.
+
+```{r carte_terr}
+ggplot() +
+  geom_sf(data = shp_terr , aes(fill = cr)) +
+  geom_sf(data = shp_cr, alpha = 0) +
+  ggrepel::geom_text_repel(
+    data = shp_terr %>%
+      filter(terr != "0" &
+               ((
+                 type_geo == "zoom_idf" &
+                   terr %in% c(
+                     "117520000",
+                     "119300000",
+                     "107870000",
+                     "107840000",
+                     "117510000",
+                     "119420000",
+                     "119410000",
+                     "109220000",
+                     "109210000",
+                     "117530000",
+                     "117540000",
+                     "107820000"
+                   )
+               ))),
+    aes(label = lib_terr, geometry = geometry),
+    stat = "sf_coordinates",
+    family = "Sarabun",
+    size = 3
+  ) +
+  geom_sf_text(
+    data = shp_terr %>%
+      filter((
+        type_geo != "zoom_idf" & !terr %in% c(
+          "0",
+          "117520000",
+          "119300000",
+          "107870000",
+          "107840000",
+          "117510000",
+          "119420000",
+          "119410000",
+          "109220000",
+          "109210000",
+          "117530000",
+          "117540000",
+          "107820000"
+        )
+      )),
+    aes(label = lib_terr, geometry = geometry),
+    stat = "sf_coordinates",
+    family = "Sarabun",
+    size = 3
+  ) +
+  scale_fill_sgdf_discrete() +
+  guides(fill = FALSE) +
+  labs(title = "Territoires SGDF") +
+  theme_sgdf_carte()
+
+ggsave(
+  here::here("inst/carte_territoire_gd_format.pdf"),
+  units = "mm",
+  width = 800,
+  height = 1200
+)
+```
+

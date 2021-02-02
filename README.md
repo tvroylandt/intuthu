@@ -54,7 +54,7 @@ Ce package contient :
 
 ## Qualité
 
-**TO DO -** L'ensemble est versionné sur Github, soumis à un contrôle qualité strict au travers d'un `check`. Un site de documentation par `pkgdown` est construit automatiquement.
+L'ensemble est versionné sur Github, soumis à un contrôle qualité strict au travers d'un `check`. Un site de documentation par `pkgdown` est construit automatiquement.
 
 Il est conseillé de regarder des utilisations de ce package dans d'autres projets :
 

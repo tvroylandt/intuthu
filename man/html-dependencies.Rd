@@ -15,7 +15,7 @@ html_dependency_caveat_brush()
 }
 \value{
 Un objet a inclure dans une liste de dependances de
-\link[htmltools:attachDependencies]{attachDependencies}.
+\link[htmltools:htmlDependencies]{attachDependencies}.
 }
 \description{
 \code{html_dependency_sarabun()} fournit la dependance pour Sarabun
